@@ -43,37 +43,3 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
 void matrix_scan_user(void) {
   // Empty
 };
-
-bool edit = false;
-uint32_t mode;
-uint16_t hue;
-uint8_t sat;
-uint8_t val;
-
-uint32_t layer_state_set_user(uint32_t state) {
-
-  if (state == 0 && edit == true) {
-    mode = rgblight_get_mode();
-    hue = rgblight_get_hue();
-    sat = rgblight_get_sat();
-    val = rgblight_get_val();
-    edit = false;
-  }
-
-  switch (biton32(state)) {
-    case 1:
-      rgblight_mode(1);
-      rgblight_setrgb(0xD3, 0x7F, 0xED);
-      break;
-    case 2:
-      rgblight_mode(1);
-      rgblight_setrgb(0xFF, 0x00, 0x00);
-      edit = true;
-      break;
-    default:
-      rgblight_mode(mode);
-      rgblight_sethsv(hue, sat, val);
-      break;
-  }
-  return state;
-}
