@@ -15,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   LAYOUT_all(
       RESET,   KC_F1,   KC_F2,   KC_F3,   KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_F9,   KC_F10,  KC_F11,   KC_F12,  KC_NO,    KC_PSCR,    \
       KC_NO,   KC_MUTE, KC_WH_U, KC_VOLU, RGB_TOG,RGB_MOD,RGB_VAI,RGB_VAD,RGB_HUI,RGB_HUD, RGB_SAI, RGB_SAD,  KC_NO,             KC_NO,    \
-      F(0),    KC_NO,   KC_WH_D, KC_VOLD, KC_NO,  KC_NO,  KC_LEFT,KC_DOWN,KC_UP,  KC_RIGHT,KC_NO,   KC_NO,    KC_NO,             KC_ENT,    \
+      F(0),    KC_NO,   KC_WH_D, KC_VOLD, RGB_M_P,KC_NO,  KC_LEFT,KC_DOWN,KC_UP,  KC_RIGHT,KC_NO,   KC_NO,    KC_NO,   KC_ENT,    \
       KC_LSFT, KC_NO,   KC_MPRV, KC_MNXT, KC_MPLY,KC_MSTP,KC_NO,  KC_NO,  KC_NO,  KC_NO,   KC_NO,   KC_NO,    KC_RSFT, KC_PGUP,  KC_INS,      \
       KC_LCTL, KC_LGUI, KC_LALT,                          KC_SPC,                          KC_RGUI, F(0),     KC_HOME, KC_PGDOWN,KC_END),
 };
